@@ -24,19 +24,32 @@ Cinema::~Cinema()
 class Movie
 {
 public:
-	Movie();
-	~Movie();
+    Movie(const string& title);
+    ~Movie();
+
+    string getTitle() const;
+    void setTitle(const string& title);
 
 private:
-
+    string title;
 };
 
-Movie::Movie()
+Movie::Movie(const string& title) : title(title)
 {
 }
 
 Movie::~Movie()
 {
+}
+
+string Movie::getTitle() const
+{
+    return title;
+}
+
+void Movie::setTitle(const string& title)
+{
+    this->title = title;
 }
 
 class Tciket
